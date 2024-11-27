@@ -1,12 +1,8 @@
+import React from 'react';
 import './App.css';
-import ProfileCard from './components/ProfileCard/ProfileCard.jsx'
+import ProfileCard, { profileCard } from './components/ProfileCard/ProfileCard.jsx'
 import Nav from './components/Nav/Nav.jsx'
-// import pics
-import homer from './homer.jpg'
-import bart from './bart.png'
-import lisa from './lisa.png'
-import maggie from './maggie.png'
-import marge from './marge.png'
+
 
 function App() {
   return (
@@ -15,11 +11,15 @@ function App() {
       <section className="blog-items team-cards">
           <div className="inner-wrapper">
             <div className="blog-container">
-              <ProfileCard pic={homer} />
-              <ProfileCard pic={lisa} />
-              <ProfileCard />
-              <ProfileCard />
-              <ProfileCard pic={bart} />
+              {
+                profileCard.map((x) => <ProfileCard 
+                  key={x.id}
+                  pic={x.image}
+                  name={x.name} 
+                  description={x.description}
+                  email={x.email}
+                  />)
+              }
             </div>
           </div>
       </section>
