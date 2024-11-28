@@ -3,13 +3,6 @@ import './ProfileCard.css'
 
 export const profileCard = [
     {
-        image: '/images/homer.jpg',
-        name: "Homer Simpson",
-        description: "Loves his family as much as his family",
-        email: "homer@simpson.com",
-        id: 1,
-    },
-    {
         image: '/images/lisa.png',
         name: "Lisa Simpson",
         description: "Amazing Harmonica Player",
@@ -17,11 +10,11 @@ export const profileCard = [
         id: 2,
     },
     {
-        image: '/images/maggie.png',
-        name: "Maggie Simpson",
-        description: "All names with double G in them are known Forces!",
-        email: "maggie@ifyouseeherrunfast.com",
-        id: 3,
+        image: '/images/homer.jpg',
+        name: "Homer Simpson",
+        description: "Loves his family as much as his family",
+        email: "homer@simpson.com",
+        id: 1,
     },
     {
         image: '/images/marge.png',
@@ -29,6 +22,13 @@ export const profileCard = [
         description: "Marge is a role model",
         email: "marge@simpson.com",
         id: 4,
+    },
+    {
+        image: '/images/maggie.png',
+        name: "Maggie Simpson",
+        description: "All names with double G in them are known Forces!",
+        email: "maggie@ifyouseeherrunfast.com",
+        id: 3,
     },
     {
         image: '/images/bart.png',
@@ -43,17 +43,17 @@ export default function ProfileCard(props) {
     return(
         <div id="single-article-1" className="single-article">
             <div id="card-front-1" className="front-card tb-card">
-                <img src={props.pic} className="profile-image" alt={props.name} />
+                <img src={props.imageName} className="profile-image" alt={props.nameHero} />
                 <div className="single-content">
                     <div className="card-middle">
-                        <h1>{props.name}</h1>
+                        <h1>{props.nameHero}</h1>
                         <p className="team-p1">
-                           {props.description }
+                           {props.descriptionAfter }
                         </p>
                     </div>
                     <div className="card-bottom">
                         <div className="card-email">
-                           {props.email}
+                           {props.emailLast}
                         </div>
                         <div className="card-icon profile-trigger" data-id="single-article-1" >
                             <i className="fa fa-chevron-right"></i>
