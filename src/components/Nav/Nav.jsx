@@ -1,6 +1,6 @@
 import './Nav.css'
 import React from 'react';
-import MenuItem from '../MenuItem/MenuItem';
+import MenuItem from '../MenuItem/MenuItem'; // Correct path
 
 export default function Nav({uperMenuData, lowerMenuData}) {
     return(
@@ -20,6 +20,7 @@ export default function Nav({uperMenuData, lowerMenuData}) {
                     </div>
                     <div className="right-upper-nav">
                         <ul className="cover-contact-about">
+                        {/* Render MenuItem for each item in uperMenuData */}
               {uperMenuData.map((y) => (
                 <MenuItem 
                 key={y.id} 
@@ -34,13 +35,15 @@ export default function Nav({uperMenuData, lowerMenuData}) {
             </div>
             <div className="lower-nav">
                 <ul className="lower-nav-ul">
+                     {/* Render lower menu items */}
                      {lowerMenuData.map((z) => (
                      <MenuItem 
                      key={z.id}
                      label={z.label}
                      submenu={z.submenu}
                      />
-                     ))}
+          ))}
+                    
                     <i className="fa fa-search"></i>
                 </ul>
             </div>

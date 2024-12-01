@@ -16,6 +16,3 @@ export default function MenuItem({ label, submenu }) {
     </li>
   );
 }
-
-
-
